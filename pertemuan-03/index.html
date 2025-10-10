@@ -1,65 +1,142 @@
  
  <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Judul halaman</title>
-    <style>
-       #about {
-        background-color: #ffffff;
-        border-radius: 10px;
-        padding: 20px;
-        max-width: 700px;
-        margin: 20px auto;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-       }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Nayaka Jibran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    #about {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 700px;
+      margin: 20px auto;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea, button {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #357ABD;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #333;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-    <h1>Ini header</h1>
-    <hl><nav>
-        <ul>
-            <li><a href="#home">Beranda</a></li>
-            <li><a href="about">Tentang</a></li>
-            <li><a href="contact">Kontak</a></li>
-        </ul>
-    </nav></hl>
-    <hl></hl>
-    <main>
-        <section id="home">`
-            <h2>Selamat Datang</h2>
-            <p>ini contoh paragraf Html</p>
-        </section>
-        <section>
-            <h2>About Nayaka Jibran</h2>
-            <p>Hallo semuanya perkenalkan nama saya Nayaka Jibran, nim saya 2511500048. Saya lahir di Toboali 3 September 2006. Hobby saya bermain alat musik, saya tidak memiliki pasangan, perkerjaan orangtua saya asn. Nama orang tua saya Sepi normalasari. Saya juga punya adik  laki-laki yang bernama Nathan sabih irhab &#128516;
+  <header>
+    <h1>Selamat Datang di Halaman Saya</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            </p>
-        </section>
-            <h2>Kontak kami</h2>
-            <input type="color">
-            <P>contoh form</P>
-            <form action="" method="get">
-              <label for="txtNama">Nama:</label>
-              <input type="text" id="txtNama" name="txtNama" placeholder="Masukan nama" required autocomplete="name">
+  <main>
+    <section id="home">
+      <h2>Selamat Datang</h2>
+      <p>Ini contoh paragraf HTML sederhana.</p>
+    </section>
 
-              <label for="txtEmail">Email:</label>
-              <input type="Email" id="txtemail" name="txtEmail" placeholder="Masukan email" required autocomplete="name">
+    <section id="about">
+      <h2>Tentang Nayaka Jibran</h2>
+      <p>Halo semuanya, perkenalkan nama saya <strong>Nayaka Jibran</strong>, NIM saya <strong>2511500048</strong>. Saya lahir di Toboali pada 3 September 2006. Hobi saya bermain alat musik. Saya tidak memiliki pasangan.</p>
+      <p>Pekerjaan orang tua saya adalah ASN, nama ibu saya <strong>Sepi Normalasari</strong>. Saya juga punya adik laki-laki bernama <strong>Nathan Sabih Irhab</strong> 😄</p>
+    </section>
 
-              <label for="txtPesan">Pesan:</label>
-              <textarea id="textPesan" name="txtPesan" rowrs="4" placeholder="tulis pesan anda..." required></textarea>
+    <section id="contact">
+      <h2>Kontak Kami</h2>
+      <input type="color">
 
-              <button type="submit">Kirim</button>
-              <button type="reset">Batal</button>
-            </form>
-          </section>
-      </main>
-    <footer> 
-        <p>&copy; 2025 Nayaka Jibran [2511500048]</p>
-    </footer>
-    </body>
+      <p>Contoh Formulir:</p>
+      <form action="" method="get">
+        <label for="txtNama">Nama:</label>
+        <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required>
 
-    </html>
-        
+        <label for="txtEmail">Email:</label>
+        <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required>
+
+        <label for="txtPesan">Pesan:</label>
+        <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nayaka Jibran [2511500048]</p>
+  </footer>
+</body>
+</html>
