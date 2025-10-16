@@ -53,7 +53,7 @@
 #contact h2 {
   color: #003366;
   border-bottom: 2px solid #003366;
-  padding-bottom: 5px;
+  padding-bottom: 6px;
   margin: 0 0 15px 0;
 }
 
@@ -88,9 +88,7 @@
   box-sizing: border-box;
 }
 
-#contact textarea {
-  resize: vertical;
-}
+
 
 #contact button {
   margin-top: 10px;
@@ -102,9 +100,6 @@
   cursor: pointer;
 }
 
-#contact button:hover {
-  background-color: #004b8a;
-}
 
 @media (max-width:600px) {
   #about p {
@@ -114,7 +109,13 @@
   #about strong {
     text-align: left;
     margin-bottom: 3px;
+  
   }
+  #contact input,
+#contact textarea,
+#contact button {
+width: 100%;
+}
 }
 </style>
 </head>
