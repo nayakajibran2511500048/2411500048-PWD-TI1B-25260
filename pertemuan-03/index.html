@@ -98,20 +98,32 @@
             margin-top: 0;
             margin-bottom: 16px;
             }
+            
+            #about p,
+            #contact label {
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            margin: 0;
+            padding: 6px 0;
+            border-bottom: 1px solid #e6e6e6;
+            }
+            
 
 
+ 
 
             </style>        
             
 
             <form action="" method="get">
-                <label for="txtNama">Nama:</label>
+                <label for="txtNama"><span>Nama:</span>
                 <input type="text" id="txtNama" name="txtNama" placeholder="Masukan nama" required autocomplete="name">
 
-                <label for="txtEmail">Email:</label>
+                <label for="txtEmail"><span>.Email:</span>
                 <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukan email" required autocomplete="email">
 
-                <label for="txtPesan">Pesan:</label>
+                <label for="txtPesan"><span>Pesan:</span>
                 <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="tulis pesan anda..." required></textarea>
 
                 <button type="submit">Kirim</button>
