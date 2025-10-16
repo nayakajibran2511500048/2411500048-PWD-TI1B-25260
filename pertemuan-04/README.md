@@ -5,5 +5,8 @@ Nama : Nayaka Jibran
 <li>ganti internal css ke ekternal css</li>
 <li>"styling header"</li>
 <li>“styling section#home”</li>
+<li>styling footer</li>
 <li>styling navigasi"</li>
+<li>styling navigasi mode mobile</li>
+<li>
 <ol>
