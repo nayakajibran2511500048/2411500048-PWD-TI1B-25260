@@ -31,3 +31,47 @@ header li a {
     padding: 6px 12px;
 }
 
+#home,
+#about,
+#contact {
+background-color: #ffffff;
+border-radius: 10px;
+padding: 20px;
+max-width: 700px;
+margin: 20px auto;
+box-shadow: 0 2px 5px rgba(0, 0, 0,
+0.1);
+}
+#home h2,
+#about h2,
+#contact h2 {
+color: #003366;
+border-bottom: 2px solid #003366;
+padding-bottom: 6px;
+margin-top: 0;
+margin-bottom: 16px;
+}
+#home p {
+text-align: justify;
+}
+footer {
+background: #222;
+color: #aaa;
+text-align: center;
+padding: 10px;
+}
+header li a:hover {
+background-color: #85020d;
+border-radius: 6px;
+transition: background-color 0.3s ease;
+}
+header li a:focus {
+outline: 2px solid #fff;
+outline-offset: 2px;
+border-radius: 6px;
+background-color: rgba(255, 255, 255, 0.15);
+}
+header li a:active {
+background-color: #cc04a1;
+transform: translateY(1px);
+}
