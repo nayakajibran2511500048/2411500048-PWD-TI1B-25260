@@ -82,6 +82,9 @@ header li a:active {
     transform: translateY(1px);
 }
 
+.menutoggle {
+    display: none;
+}
 
 @media (max-width: 600px) {
 
@@ -109,7 +112,7 @@ header li a:active {
 
     
     nav.active {
-        display: flex;
+        display: block;
     }
 
     header ul {
