@@ -131,11 +131,9 @@ body {
 
 <main>
   <section id="home">
+    
     <h2>Selamat Datang</h2>
-    <p>Ini contoh paragraf HTML</p>
-    <?php
-    echo "halo dunia!";
-    ?>
+
   </section>
 
   <section id="about">
