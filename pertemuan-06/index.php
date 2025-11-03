@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Judul halaman</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+  font-family: 'Times New Roman';
+  margin: 0;
+  background-color: #f6f6f6;
+}
+
+#about, #contact, #ipk {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+#about h2, #contact h2, #ipk h2 {
+  color: #003366;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 6px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+#about p, #ipk p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #e6e6e6;
+  text-align: left;
+}
+
+#about strong, #ipk strong {
+  min-width: 180px;
+  color: #003366;
+  font-weight: bold;
+  text-align: left;
+  padding-right: 16px;
+  flex-shrink: 0;
+}
+
+#contact label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+#contact label > span {
+  min-width: 180px;
+  color: #052e57;
+  font-weight: 600;
+  text-align: left;
+  padding-right: 16px;
+  flex-shrink: 0;
+}
+
+#contact input,
+#contact textarea {
+  flex: 1;
+  border: 1px solid #dadae6;
+  border-radius: 6px;
+  padding: 8px;
+  color: #000;
+  font-weight: normal;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#contact button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #003366;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: #0055aa;
+}
+
+@media (max-width:600px) {
+  #about p, #contact label, #ipk p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #about strong, #contact label > span, #ipk strong {
+    text-align: left;
+    margin-bottom: 4px;
+  }
+
+  #contact input,
+  #contact textarea,
+  #contact button {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Ini header</h1>
+  <button class="menutoggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
+  <hr>
+  <nav>
+    <ul>
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </nav>
+  <hr>
+</header>
+
+<main>
+  <section id="home">
+    <h2>Selamat Datang</h2>
+    <p>Ini contoh paragraf HTML</p>
+    <?php
+    echo "halo dunia!";
+    ?>
+  </section>
+
+  <section id="about">
+    <?php
+      $NIM  = "2511500048";
+      $NAMA = "Nayaka Jibran";
+    ?>
+    <h2>About Nayaka Jibran</h2>
+    <p><strong>Nama Lengkap:</strong> <?= $NAMA; ?></p>
+    <p><strong>NIM:</strong> <?= $NIM; ?></p>
+    <p><strong>Tempat Lahir:</strong> Toboali</p>
+    <p><strong>Tanggal Lahir:</strong> 3 September 2006</p>
+    <p><strong>Hobi:</strong> Bermain alat musik, Basket</p>
+    <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
+    <p><strong>Pekerjaan:</strong> Session Player Music</p>
+    <p><strong>Nama Orang Tua:</strong> Ayah Irawan dan Ibu Sepi Normalasari</p>
+    <p><strong>Nama Adik:</strong> Nathan Sabih Irhap</p>
+  </section>
+
+  <section id="contact">
+    <h2>Kontak Kami</h2>
+    <form action="" method="get">
+      <label for="txtNama">
+        <span>Nama:</span>
+        <input type="text" id="txtNama" name="txtNama" placeholder="Masukan nama" required autocomplete="name">
+      </label>
+
+      <label for="txtEmail">
+        <span>Email:</span>
+        <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukan email" required autocomplete="email">
+      </label>
+
+      <label for="txtPesan">
+        <span>Pesan:</span>
+        <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+        <small id="charCount">0/200 karakter</small>
+      </label>
+
+      <div>
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+      </div>
+    </form>
+  </section>
+
+  <section id="ipk">
+    <h2>Nilai Saya</h2>
+    <?php
+    
+    $namaMatkul1 = "Algoritma dan Struktur Data";
+    $sksMatkul1 = 4;
+    $nilaiHadir1 = 90;
+    $nilaiTugas1 = 60;
+    $nilaiUTS1 = 80;
+    $nilaiUAS1 = 70;
+
+    $namaMatkul2 = "Agama";
+    $sksMatkul2 = 2;
+    $nilaiHadir2 = 70;
+    $nilaiTugas2 = 50;
+    $nilaiUTS2 = 60;
+    $nilaiUAS2 = 80;
+
+    $namaMatkul3 = "Matematika Diskrit";
+    $sksMatkul3 = 3;
+    $nilaiHadir3 = 80;
+    $nilaiTugas3 = 75;
+    $nilaiUTS3 = 70;
+    $nilaiUAS3 = 85;
+
+    $namaMatkul4 = "Sistem Operasi";
+    $sksMatkul4 = 3;
+    $nilaiHadir4 = 90;
+    $nilaiTugas4 = 80;
+    $nilaiUTS4 = 85;
+    $nilaiUAS4 = 88;
+
+    $namaMatkul5 = "Pemrograman Web Dasar";
+    $sksMatkul5 = 3;
+    $nilaiHadir5 = 69;
+    $nilaiTugas5 = 80;
+    $nilaiUTS5 = 90;
+    $nilaiUAS5 = 100;
+
+    
+    function hitungGrade($nilaiAkhir, $hadir) {
+      if ($hadir < 70) return ['E', 0];
+      if ($nilaiAkhir >= 91) return ['A', 4];
+      if ($nilaiAkhir >= 81) return ['A-', 3.7];
+      if ($nilaiAkhir >= 76) return ['B+', 3.3];
+      if ($nilaiAkhir >= 71) return ['B', 3];
+      if ($nilaiAkhir >= 66) return ['B-', 2.7];
+      if ($nilaiAkhir >= 61) return ['C+', 2.3];
+      if ($nilaiAkhir >= 56) return ['C', 2];
+      if ($nilaiAkhir >= 51) return ['C-', 1.7];
+      if ($nilaiAkhir >= 36) return ['D', 1];
+      return ['E', 0];
+    }
+
+    
+    $totalBobot = 0;
+    $totalSKS = 0;
+
+    for ($i = 1; $i <= 5; $i++) {
+      $nilaiAkhir = (0.1 * ${"nilaiHadir$i"}) + (0.2 * ${"nilaiTugas$i"}) + (0.3 * ${"nilaiUTS$i"}) + (0.4 * ${"nilaiUAS$i"});
+      list($grade, $mutu) = hitungGrade($nilaiAkhir, ${"nilaiHadir$i"});
+      $bobot = $mutu * ${"sksMatkul$i"};
+      $status = ($grade == "D" || $grade == "E") ? "Gagal" : "Lulus";
+
+      echo "<p><strong>Nama Matakuliah ke-$i:</strong> ${"namaMatkul$i"}</p>";
+      echo "<p><strong>SKS:</strong> ${"sksMatkul$i"}</p>";
+      echo "<p><strong>Kehadiran:</strong> ${"nilaiHadir$i"}</p>";
+      echo "<p><strong>Tugas:</strong> ${"nilaiTugas$i"}</p>";
+      echo "<p><strong>UTS:</strong> ${"nilaiUTS$i"}</p>";
+      echo "<p><strong>UAS:</strong> ${"nilaiUAS$i"}</p>";
+      echo "<p><strong>Nilai Akhir:</strong> " . round($nilaiAkhir, 2) . "</p>";
+      echo "<p><strong>Grade:</strong> $grade</p>";
+      echo "<p><strong>Angka Mutu:</strong> $mutu</p>";
+      echo "<p><strong>Bobot:</strong> $bobot</p>";
+      echo "<p><strong>Status:</strong> $status</p>";
+      echo "<hr>";
+
+      $totalBobot += $bobot;
+      $totalSKS += ${"sksMatkul$i"};
+    }
+
+    $IPK = $totalBobot / $totalSKS;
+
+    echo "<p><strong>Total Bobot:</strong> $totalBobot</p>";
+    echo "<p><strong>Total SKS:</strong> $totalSKS</p>";
+    echo "<p><strong>IPK:</strong> " . round($IPK, 2) . "</p>";
+    ?>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Nayaka Jibran [2511500048]</p>
+</footer>
+
+<script>
+  alert("Halo Dunia!");
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
