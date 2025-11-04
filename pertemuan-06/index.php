@@ -123,6 +123,7 @@ body {
     <ul>
       <li><a href="#home">Beranda</a></li>
       <li><a href="#about">Tentang</a></li>
+      <li><a href="#ipk">Nilai</a></li>
       <li><a href="#contact">Kontak</a></li>
     </ul>
   </nav>
@@ -132,56 +133,34 @@ body {
 <main>
   <section id="home">
     <h2>Selamat Datang</h2>
-    
+    Hallo semuanya, selamat datang di Halaman saya
   </section>
 
   <section id="about">
-    <?php
-      $NIM  = "2511500048";
-      $NAMA = "Nayaka Jibran";
-      ?>
-    <h2>About Nayaka Jibran</h2>
-    <p><strong>Nama Lengkap:</strong> <?= $NAMA; ?></p>
-    <p><strong>NIM:</strong> <?= $NIM; ?></p>
-    <p><strong>Tempat Lahir:</strong> Toboali</p>
-    <p><strong>Tanggal Lahir:</strong> 3 September 2006</p>
-    <p><strong>Hobi:</strong> Bermain alat musik, Basket</p>
-    <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
-    <p><strong>Pekerjaan:</strong> Session Player Music</p>
-    <p><strong>Nama Orang Tua:</strong> Ayah Irawan dan Ibu Sepi Normalasari</p>
-    <p><strong>Nama Adik:</strong> Nathan Sabih Irhap</p>
-  </section>
+  <?php
+   
+    $NIM  = "2511500048";
+    $NAMA = "Nayaka Jibran";
+    $lahir = "Toboali, 3 September 2006";
+    $hobi = "Bermain alat musik, Basket";
+    $status = "Belum ada ❤";
+    $pekerjaan = "Session Player Music";
 
-  <section id="contact">
-    <h2>Kontak Kami</h2>
-    <form action="" method="get">
-      <label for="txtNama">
-        <span>Nama:</span>
-        <input type="text" id="txtNama" name="txtNama" placeholder="Masukan nama" required autocomplete="name">
-      </label>
-
-      <label for="txtEmail">
-        <span>Email:</span>
-        <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukan email" required autocomplete="email">
-      </label>
-
-      <label for="txtPesan">
-        <span>Pesan:</span>
-        <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
-        <small id="charCount">0/200 karakter</small>
-      </label>
-
-      <div>
-        <button type="submit">Kirim</button>
-        <button type="reset">Batal</button>
-      </div>
-    </form>
-  </section>
+    echo "<h2>About $NAMA</h2>";
+    echo "<p><strong>Nama Lengkap:</strong> $NAMA</p>";
+    echo "<p><strong>NIM:</strong> $NIM</p>";
+    echo "<p><strong>Tempat & Tanggal Lahir:</strong> $lahir</p>";
+    echo "<p><strong>Hobi:</strong> $hobi</p>";
+    echo "<p><strong>Pasangan:</strong> $status</p>";
+    echo "<p><strong>Pekerjaan:</strong> $pekerjaan</p>";
+    echo "<p><strong>Nama Orang Tua:</strong> Ayah Irawan dan Ibu Sepi Normalasari</p>";
+    echo "<p><strong>Nama Adik:</strong> Nathan Sabih Irhap</p>";
+  ?>
+</section>
 
   <section id="ipk">
     <h2>Nilai Saya</h2>
     <?php
-    // ---------- Data 5 Mata Kuliah ----------
     $namaMatkul1 = "Algoritma dan Struktur Data";
     $sksMatkul1 = 4;
     $nilaiHadir1 = 90;
@@ -217,7 +196,6 @@ body {
     $nilaiUTS5 = 90;
     $nilaiUAS5 = 100;
 
-    // ---------- Fungsi Penentuan Grade dan Mutu ----------
     function hitungGrade($nilaiAkhir, $hadir) {
       if ($hadir < 70) return ['E', 0];
       if ($nilaiAkhir >= 91) return ['A', 4];
@@ -232,7 +210,6 @@ body {
       return ['E', 0];
     }
 
-    // ---------- Perhitungan Masing-masing Mata Kuliah ----------
     $totalBobot = 0;
     $totalSKS = 0;
 
@@ -244,16 +221,9 @@ body {
 
       echo "<p><strong>Nama Matakuliah ke-$i:</strong> ${"namaMatkul$i"}</p>";
       echo "<p><strong>SKS:</strong> ${"sksMatkul$i"}</p>";
-      echo "<p><strong>Kehadiran:</strong> ${"nilaiHadir$i"}</p>";
-      echo "<p><strong>Tugas:</strong> ${"nilaiTugas$i"}</p>";
-      echo "<p><strong>UTS:</strong> ${"nilaiUTS$i"}</p>";
-      echo "<p><strong>UAS:</strong> ${"nilaiUAS$i"}</p>";
       echo "<p><strong>Nilai Akhir:</strong> " . round($nilaiAkhir, 2) . "</p>";
       echo "<p><strong>Grade:</strong> $grade</p>";
-      echo "<p><strong>Angka Mutu:</strong> $mutu</p>";
-      echo "<p><strong>Bobot:</strong> $bobot</p>";
-      echo "<p><strong>Status:</strong> $status</p>";
-      echo "<hr>";
+      echo "<p><strong>Status:</strong> $status</p><hr>";
 
       $totalBobot += $bobot;
       $totalSKS += ${"sksMatkul$i"};
@@ -261,21 +231,41 @@ body {
 
     $IPK = $totalBobot / $totalSKS;
 
-    echo "<p><strong>Total Bobot:</strong> $totalBobot</p>";
     echo "<p><strong>Total SKS:</strong> $totalSKS</p>";
     echo "<p><strong>IPK:</strong> " . round($IPK, 2) . "</p>";
     ?>
+  </section>
+
+  <section id="contact">
+    <h2>Kontak Kami</h2>
+    <form action="" method="get">
+      <label for="txtNama">
+        <span>Nama:</span>
+        <input type="text" id="txtNama" name="txtNama" placeholder="Masukan nama" required autocomplete="name">
+      </label>
+
+      <label for="txtEmail">
+        <span>Email:</span>
+        <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukan email" required autocomplete="email">
+      </label>
+
+      <label for="txtPesan">
+        <span>Pesan:</span>
+        <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+        <small id="charCount">0/200 karakter</small>
+      </label>
+
+      <div>
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+      </div>
+    </form>
   </section>
 </main>
 
 <footer>
   <p>&copy; 2025 Nayaka Jibran [2511500048]</p>
 </footer>
-
-<script>
-  alert("Halo Dunia!");
-</script>
-<script src="script.js"></script>
 
 </body>
 </html>
