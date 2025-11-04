@@ -131,16 +131,15 @@ body {
 
 <main>
   <section id="home">
-    
     <h2>Selamat Datang</h2>
-
+    
   </section>
 
   <section id="about">
     <?php
       $NIM  = "2511500048";
       $NAMA = "Nayaka Jibran";
-    ?>
+      ?>
     <h2>About Nayaka Jibran</h2>
     <p><strong>Nama Lengkap:</strong> <?= $NAMA; ?></p>
     <p><strong>NIM:</strong> <?= $NIM; ?></p>
@@ -182,7 +181,7 @@ body {
   <section id="ipk">
     <h2>Nilai Saya</h2>
     <?php
-    
+    // ---------- Data 5 Mata Kuliah ----------
     $namaMatkul1 = "Algoritma dan Struktur Data";
     $sksMatkul1 = 4;
     $nilaiHadir1 = 90;
@@ -218,7 +217,7 @@ body {
     $nilaiUTS5 = 90;
     $nilaiUAS5 = 100;
 
-    
+    // ---------- Fungsi Penentuan Grade dan Mutu ----------
     function hitungGrade($nilaiAkhir, $hadir) {
       if ($hadir < 70) return ['E', 0];
       if ($nilaiAkhir >= 91) return ['A', 4];
@@ -233,7 +232,7 @@ body {
       return ['E', 0];
     }
 
-    
+    // ---------- Perhitungan Masing-masing Mata Kuliah ----------
     $totalBobot = 0;
     $totalSKS = 0;
 
