@@ -1,6 +1,6 @@
 # pertemuan-06
 
-hari ini, kamis
+hari ini, Selasa
 saya Nayaka jibran<br>
 NIM : 2511500048<br>
 <br>
