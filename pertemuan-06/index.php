@@ -133,7 +133,7 @@ body {
 <main>
   <section id="home">
     <h2>Selamat Datang</h2>
-    Hallo semuanya, selamat datang di Halaman saya
+    
   </section>
 
   <section id="about">
