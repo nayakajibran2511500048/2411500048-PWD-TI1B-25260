@@ -145,7 +145,9 @@ body {
     $hobi = "Bermain alat musik, Basket";
     $status = "Belum ada ❤";
     $pekerjaan = "Session Player Music";
-
+    $NamaOrangTua = "Ayah Irawan dan Ibu Sepi Normalasari";
+    $NamaAdik = "Nathan Sabih Irhap";
+  
     echo "<h2>About $NAMA</h2>";
     echo "<p><strong>Nama Lengkap:</strong> $NAMA</p>";
     echo "<p><strong>NIM:</strong> $NIM</p>";
@@ -266,6 +268,8 @@ body {
 <footer>
   <p>&copy; 2025 Nayaka Jibran [2511500048]</p>
 </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
