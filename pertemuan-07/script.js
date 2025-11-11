@@ -127,8 +127,8 @@ document.querySelector("form").addEventListener("submit", function (e) {
         e.preventDefault();
     } else {
         alert("Terima kasih, " + nama.value + "!\nPesan Anda telah dikirim.");
-       //.target.reset();
-       e.target.submit();
+        // e.target.reset();
+        e.target.submit();
     }
 });
 
