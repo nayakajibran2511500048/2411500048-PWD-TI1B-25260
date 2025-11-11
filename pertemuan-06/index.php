@@ -14,7 +14,7 @@ body {
   background-color: #f6f6f6;
 }
 
-#about, #contact, #ipk {
+#about, #contact, #ipk {    `
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
