@@ -1,8 +1,7 @@
 <?php
 session_start();
-$_SESSION["nama"] = $_GET["TextNama"];
-$_SESSION["email"] = $_GET["TextEmail"];
-$_SESSION["pesan"] = $_GET["TextPesan"];
-header("Location: index.php");
-exit;
+$_SESSION["nama"] = $_GET["txtNama"];
+$_SESSION["email"] = $_GET["txtEmail"];
+$_SESSION["pesan"] = $_GET["txtPesan"];
+header("Location: get.php");
 ?>
