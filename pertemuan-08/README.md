@@ -12,3 +12,4 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
 </ol>
 <li>menambahkan section baru dengan judul Entry Data Mahasiswa</li>
 <li>membuat input nama lengkap , NIM , Tempat Lahir ,Tanggal lahir, Hobi, Pasangan, perkerjaan, Nama orang tua, Nama adik, Tombol kirim dan batal pada section#contact.</li>
+<li>menambahkan style css dan html</li>

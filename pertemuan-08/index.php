@@ -27,6 +27,10 @@ endif;
   <link rel="stylesheet" href="style.css">
 </head>
 
+<style>
+
+</style>
+
 <body>
   <header>
     <h1>Ini Header</h1>
@@ -53,17 +57,30 @@ endif;
     </section>
 
     <section id="Entry Data Mahasiswa">
-      <h2>About Nayaka Jibran</h2>
-    <p><strong>Nama Lengkap:</strong> Nayaka Jibran</p>
-    <p><strong>NIM:</strong> 2511500048</p>
-    <p><strong>Tempat Lahir:</strong> Toboali</p>
-    <p><strong>Tanggal Lahir:</strong> 3 September 2006</p>
-    <p><strong>Hobi:</strong> Bermain alat musik, Basket </p>
-    <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
-    <p><strong>Pekerjaan:</strong> Session Player Music</p>
-    <p><strong>Nama Orang Tua:</strong> Ayah Irawan dan Ibu Sepi Normalasari</p>
-    <p><strong>Nama Adik:</strong> Nathan Sabih Irhap</p>
-    
+     <section id="about">
+  <?php
+   
+    $NIM  = "2511500048";
+    $NAMA = "Nayaka Jibran";
+    $lahir = "Toboali, 3 September 2006";
+    $hobi = "Bermain alat musik, Basket";
+    $status = "Belum ada ❤";
+    $pekerjaan = "Session Player Music";
+    $NamaOrangTua = "Ayah Irawan dan Ibu Sepi Normalasari";
+    $NamaAdik = "Nathan Sabih Irhap";
+  
+    echo "<h2>About $NAMA</h2>";
+    echo "<p><strong>Nama Lengkap:</strong> $NAMA</p>";
+    echo "<p><strong>NIM:</strong> $NIM</p>";
+    echo "<p><strong>Tempat & Tanggal Lahir:</strong> $lahir</p>";
+    echo "<p><strong>Hobi:</strong> $hobi</p>";
+    echo "<p><strong>Pasangan:</strong> $status</p>";
+    echo "<p><strong>Pekerjaan:</strong> $pekerjaan</p>";
+    echo "<p><strong>Nama Orang Tua:</strong> Ayah Irawan dan Ibu Sepi Normalasari</p>";
+    echo "<p><strong>Nama Adik:</strong> Nathan Sabih Irhap</p>";
+  ?>
+</section>
+
     <h2>Kontak Kami</h2>
       <form action="proses.php" method="POST">
 
@@ -73,6 +90,34 @@ endif;
 
         <label for="txtEmail"><span>Email:</span>
           <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
+        </label>
+
+        <label for="txtNIM"><span>NIM:</span>
+          <input type="text" id="txtNIM" name="txtNIM" placeholder="Masukkan NIM" required autocomplete="NIM">
+        </label>
+
+        <label for="txtTempat & Tanggal lahir"><span>Tempat & Tanggal Lahir:</span>
+          <input type="text" id="txtTempat & Tanggal lahir" name="txtTempat & Tanggal lahir" placeholder="Tempat & Tanggal lahir" required autocomplete="Tempat & Tanggal lahir">
+        </label>
+
+        <label for="txtHobi"><span>Hobi:</span>
+          <input type="email" id="txt" name="txtHobi" placeholder="Masukkan Hobi" required autocomplete="Hobi">
+        </label>
+
+        <label for="txtPasangan"><span>Pasangan:</span>
+          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Pasangan" required autocomplete="Pasangan">
+        </label>
+
+        <label for="txtPekerjaan"><span>Pekerjaan:</span>
+          <input type="email" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan Pekerjaan" required autocomplete="Pekerjaan">
+        </label>
+
+        <label for="txtNama Orang Tua"><span>NamaOrangTua:</span>
+          <input type="text" id="txtNama Orang Tua" name="txtNama Orang Tua" placeholder="Masukkan Nama Orang Tua" required autocomplete="Nama Orang ">
+        </label>
+
+        <label for="txtNama Adik"><span>Nama Adik:</span>
+          <input type="Nama adik" id="txtNama Adik" name="txtAdik" placeholder="Masukkan Nama adik" required autocomplete="Nama adik">
         </label>
 
         <label for="txtPesan"><span>Pesan Anda:</span>
@@ -87,6 +132,41 @@ endif;
     
     
     <section>
+      <style>
+      #hasilKontak {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+#hasilKontak h2 {
+  color: #003366;
+  font-size: 20px;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+#hasilKontak p {
+  margin: 10px 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+#hasilKontak strong {
+  color: #003366;
+  font-weight: bold;
+  min-width: 150px;
+  display: inline-block;
+}
+</style>
 
 
     <section id="about">
