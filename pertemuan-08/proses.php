@@ -1,5 +1,6 @@
-
 <?php
+session_start();
+
 if (isset($_POST["submit_data"])) {
   $_SESSION["nim"] = $_POST["nim"];
   $_SESSION["nama"] = $_POST["nama"];
