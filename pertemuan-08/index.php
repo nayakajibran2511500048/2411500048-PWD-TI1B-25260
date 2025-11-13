@@ -1,20 +1,9 @@
 <?php
 session_start();
 
-$sesnama = "";
-if (isset($_SESSION["sesnama"])):
-  $sesnama = $_SESSION["sesnama"];
-endif;
-
-$sesemail = "";
-if (isset($_SESSION["sesemail"])):
-  $sesemail = $_SESSION["sesemail"];
-endif;
-
-$sespesan = "";
-if (isset($_SESSION["sespesan"])):
-  $sespesan = $_SESSION["sespesan"];
-endif;
+$sesnama = isset($_SESSION["sesnama"]) ? $_SESSION["sesnama"] : "";
+$sesemail = isset($_SESSION["sesemail"]) ? $_SESSION["sesemail"] : "";
+$sespesan = isset($_SESSION["sespesan"]) ? $_SESSION["sespesan"] : "";
 ?>
 
 <!DOCTYPE html>
@@ -27,16 +16,10 @@ endif;
   <link rel="stylesheet" href="style.css">
 </head>
 
-<style>
-
-</style>
-
 <body>
   <header>
     <h1>Ini Header</h1>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
-      &#9776;
-    </button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
     <nav>
       <ul>
         <li><a href="#home">Beranda</a></li>
@@ -56,8 +39,7 @@ endif;
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
-    <section id="Entry Data Mahasiswa">
-     <section id="about">
+    <section id="about">
   <?php
    
     $NIM  = "2511500048";
@@ -81,9 +63,11 @@ endif;
   ?>
 </section>
 
-    <h2>Kontak Kami</h2>
-      <form action="proses.php" method="POST">
 
+    <section id="Entry-data">
+      <h2>Entry Data Mahasiswa</h2>
+
+      <form action="proses.php" method="POST">
         <label for="txtNama"><span>Nama:</span>
           <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
         </label>
@@ -96,28 +80,28 @@ endif;
           <input type="text" id="txtNIM" name="txtNIM" placeholder="Masukkan NIM" required autocomplete="NIM">
         </label>
 
-        <label for="txtTempat & Tanggal lahir"><span>Tempat & Tanggal Lahir:</span>
-          <input type="text" id="txtTempat & Tanggal lahir" name="txtTempat & Tanggal lahir" placeholder="Tempat & Tanggal lahir" required autocomplete="Tempat & Tanggal lahir">
+        <label for="txtTTL"><span>Tempat & Tanggal Lahir:</span>
+          <input type="text" id="txtTTL" name="txtTTL" placeholder="Tempat & Tanggal lahir" required>
         </label>
 
         <label for="txtHobi"><span>Hobi:</span>
-          <input type="email" id="txt" name="txtHobi" placeholder="Masukkan Hobi" required autocomplete="Hobi">
+          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan Hobi" required>
         </label>
 
         <label for="txtPasangan"><span>Pasangan:</span>
-          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Pasangan" required autocomplete="Pasangan">
+          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Pasangan" required>
         </label>
 
         <label for="txtPekerjaan"><span>Pekerjaan:</span>
-          <input type="email" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan Pekerjaan" required autocomplete="Pekerjaan">
+          <input type="text" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan Pekerjaan" required>
         </label>
 
-        <label for="txtNama Orang Tua"><span>NamaOrangTua:</span>
-          <input type="text" id="txtNama Orang Tua" name="txtNama Orang Tua" placeholder="Masukkan Nama Orang Tua" required autocomplete="Nama Orang ">
+        <label for="txtOrtu"><span>Nama Orang Tua:</span>
+          <input type="text" id="txtOrtu" name="txtOrtu" placeholder="Masukkan Nama Orang Tua" required>
         </label>
 
-        <label for="txtNama Adik"><span>Nama Adik:</span>
-          <input type="Nama adik" id="txtNama Adik" name="txtAdik" placeholder="Masukkan Nama adik" required autocomplete="Nama adik">
+        <label for="txtAdik"><span>Nama Adik:</span>
+          <input type="text" id="txtAdik" name="txtAdik" placeholder="Masukkan Nama Adik" required>
         </label>
 
         <label for="txtPesan"><span>Pesan Anda:</span>
@@ -125,69 +109,20 @@ endif;
           <small id="charCount">0/200 karakter</small>
         </label>
 
-
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
-        </form>
-    
-    
-    <section>
-      <style>
-      #hasilKontak {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-  padding: 20px;
-  max-width: 700px;
-  margin: 20px auto;
-}
-
-#hasilKontak h2 {
-  color: #003366;
-  font-size: 20px;
-  border-bottom: 2px solid #003366;
-  padding-bottom: 6px;
-  margin-bottom: 16px;
-  text-align: left;
-}
-
-#hasilKontak p {
-  margin: 10px 0;
-  padding: 8px 0;
-  border-bottom: 1px solid #e6e6e6;
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-}
-
-#hasilKontak strong {
-  color: #003366;
-  font-weight: bold;
-  min-width: 150px;
-  display: inline-block;
-}
-</style>
-
+      </form>
+    </section>
 
     <section id="about">
       <?php
-      $nim = 2511500010;
       $NIM = '0344300002';
-      $nama = "Say'yid Abdullah";
       $Nama = 'Al\'kautar Benyamin';
       $tempat = "Jebus";
       ?>
       <h2>Tentang Saya</h2>
-      <p><strong>NIM:</strong>
-        <?php
-        echo $NIM;
-        ?>
-      </p>
-      <p><strong>Nama Lengkap:</strong>
-        <?php
-        echo $Nama;
-        ?> &#128526;
-      </p>
+      <p><strong>NIM:</strong> <?php echo $NIM; ?></p>
+      <p><strong>Nama Lengkap:</strong> <?php echo $Nama; ?> &#128526;</p>
       <p><strong>Tempat Lahir:</strong> <?php echo $tempat; ?></p>
       <p><strong>Tanggal Lahir:</strong> 1 Januari 2000</p>
       <p><strong>Hobi:</strong> Memasak, coding, dan bermain musik &#127926;</p>
@@ -201,7 +136,6 @@ endif;
     <section id="contact">
       <h2>Kontak Kami</h2>
       <form action="proses.php" method="POST">
-
         <label for="txtNama"><span>Nama:</span>
           <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
         </label>
@@ -215,21 +149,18 @@ endif;
           <small id="charCount">0/200 karakter</small>
         </label>
 
-
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
 
       <?php if (!empty($sesnama)): ?>
-        <br><hr>
-        <h2>Yang menghubungi kami</h2>
-        <p><strong>Nama :</strong> <?php echo $sesnama ?></p>
-        <p><strong>Email :</strong> <?php echo $sesemail ?></p>
-        <p><strong>Pesan :</strong> <?php echo $sespesan ?></p>
+      <div id="hasilKontak">
+        <h2>Yang Menghubungi Kami</h2>
+        <p><strong>Nama:</strong> <?php echo $sesnama ?></p>
+        <p><strong>Email:</strong> <?php echo $sesemail ?></p>
+        <p><strong>Pesan:</strong> <?php echo $sespesan ?></p>
+      </div>
       <?php endif; ?>
-
-
-
     </section>
   </main>
 
@@ -239,5 +170,4 @@ endif;
 
   <script src="script.js"></script>
 </body>
-
 </html>
