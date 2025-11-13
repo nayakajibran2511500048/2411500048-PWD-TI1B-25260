@@ -10,7 +10,6 @@ body {
   line-height: 1.5;
 }
 
-
 header {
   background: #003366;
   color: #fff;
@@ -50,11 +49,10 @@ header li a:active {
   transform: translateY(1px);
 }
 
-
 #home,
 #about,
 #contact,
-#Entry-data  {
+#entry-data {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
@@ -63,11 +61,10 @@ header li a:active {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
 #home h2,
 #about h2,
 #contact h2,
-#Data h2 {
+#entry-data h2 {
   color: #003366;
   border-bottom: 2px solid #003366;
   padding-bottom: 6px;
@@ -75,14 +72,13 @@ header li a:active {
   margin-bottom: 16px;
 }
 
-
 #home p {
   text-align: justify;
 }
 
 #about p,
 #contact label,
-#Data label {
+#entry-data label {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
@@ -91,10 +87,9 @@ header li a:active {
   border-bottom: 1px solid #e6e6e6;
 }
 
-
 #about strong,
 #contact label > span,
-#Data label > span {
+#entry-data label > span {
   min-width: 180px;
   color: #003366;
   font-weight: 600;
@@ -103,11 +98,10 @@ header li a:active {
   flex-shrink: 0;
 }
 
-
 #contact input,
 #contact textarea,
-#Data input,
-#Data textarea {
+#entry-data input,
+#entry-data textarea {
   flex: 1;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -118,9 +112,8 @@ header li a:active {
   box-sizing: border-box;
 }
 
-
 #contact button,
-#Data button {
+#entry-data button {
   margin-top: 10px;
   display: inline-block;
   padding: 10px 24px;
@@ -133,32 +126,31 @@ header li a:active {
 }
 
 #contact button[type="submit"],
-#Data button[type="submit"] {
+#entry-data button[type="submit"] {
   background-color: #003366;
   color: #fff;
   font-weight: 600;
 }
 
 #contact button[type="reset"],
-#Data button[type="reset"] {
+#entry-data button[type="reset"] {
   background-color: #b4b4b4;
   color: #272727;
   font-weight: 500;
 }
 
 #contact button[type="submit"]:hover,
-#Data button[type="submit"]:hover {
+#entry-data button[type="submit"]:hover {
   background-color: #0379ee;
   transform: translateY(-1px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 #contact button[type="reset"]:hover,
-#Data button[type="reset"]:hover {
+#entry-data button[type="reset"]:hover {
   background-color: #cccccc;
   transform: translateY(-1px);
 }
-
 
 footer {
   background: #222;
@@ -166,7 +158,6 @@ footer {
   text-align: center;
   padding: 10px;
 }
-
 
 .menu-toggle {
   display: none;
@@ -176,7 +167,6 @@ footer {
   font-size: 28px;
   cursor: pointer;
 }
-
 
 @media (max-width: 600px) {
   .menu-toggle {
@@ -226,17 +216,16 @@ footer {
     backdrop-filter: saturate(120%);
   }
 
-  
   #about p,
   #contact label,
-  #Data label {
+  #entry-data label {
     flex-direction: column;
     align-items: flex-start;
   }
 
   #about strong,
   #contact label > span,
-  #Data label > span {
+  #entry-data label > span {
     text-align: left;
     padding-right: 0;
     margin-bottom: 2px;
@@ -245,9 +234,9 @@ footer {
   #contact input,
   #contact textarea,
   #contact button,
-  #Data input,
-  #Data textarea,
-  #Data button {
+  #entry-data input,
+  #entry-data textarea,
+  #entry-data button {
     width: 100%;
   }
 }

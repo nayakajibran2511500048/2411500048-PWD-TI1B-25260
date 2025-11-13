@@ -64,7 +64,7 @@ $sespesan = isset($_SESSION["sespesan"]) ? $_SESSION["sespesan"] : "";
 </section>
 
 
-    <section id="Entry-data">
+    <section id="entry-data">
       <h2>Entry Data Mahasiswa</h2>
 
       <form action="proses.php" method="POST">
