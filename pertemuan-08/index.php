@@ -1,10 +1,63 @@
 <?php
 session_start();
 
-$sesnama = isset($_SESSION["sesnama"]) ? $_SESSION["sesnama"] : "";
-$sesemail = isset($_SESSION["sesemail"]) ? $_SESSION["sesemail"] : "";
-$sespesan = isset($_SESSION["sespesan"]) ? $_SESSION["sespesan"] : "";
+$sesnama = "";
+if (isset($_SESSION["sesnama"])) {
+  $sesnama = $_SESSION["sesnama"];
+}
+
+$sesemail = "";
+if (isset($_SESSION["sesemail"])) {
+  $sesemail = $_SESSION["sesemail"];
+}
+
+$sespesan = "";
+if (isset($_SESSION["sespesan"])) {
+  $sespesan = $_SESSION["sespesan"];
+}
+
+$sesnim = "";
+if (isset($_SESSION["sesnim"])) {
+  $sesnim = $_SESSION["sesnim"];
+}
+
+$sestgl_lahir = "";
+if (isset($_SESSION["sestgl_lahir"])) {
+  $sestgl_lahir = $_SESSION["sestgl_lahir"];
+}
+
+$seshobi = "";
+if (isset($_SESSION["seshobi"])) {
+  $seshobi = $_SESSION["seshobi"];
+}
+
+$sespasangan = "";
+if (isset($_SESSION["sespasangan"])) {
+  $sespasangan = $_SESSION["sespasangan"];
+}
+
+$sespekerjaan = "";
+if (isset($_SESSION["sespekerjaan"])) {
+  $sespekerjaan = $_SESSION["sespekerjaan"];
+}
+
+$sesortu = "";
+if (isset($_SESSION["sesortu"])) {
+  $sesortu = $_SESSION["sesortu"];
+}
+
+$seskakak = "";
+if (isset($_SESSION["seskakak"])) {
+  $seskakak = $_SESSION["seskakak"];
+}
+
+$sesadik = "";
+if (isset($_SESSION["sesadik"])) {
+  $sesadik = $_SESSION["sesadik"];
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -159,6 +212,13 @@ $sespesan = isset($_SESSION["sespesan"]) ? $_SESSION["sespesan"] : "";
         <p><strong>Nama:</strong> <?php echo $sesnama ?></p>
         <p><strong>Email:</strong> <?php echo $sesemail ?></p>
         <p><strong>Pesan:</strong> <?php echo $sespesan ?></p>
+        <p><strong>NIM:</strong> <?php echo $sesnim ?></p>
+        <p><strong>Hobi:</strong> <?php echo $seshobi ?></p>
+        <p><strong>Pasangan:</strong> <?php echo $sespasangan ?></p>
+        <p><strong>Pekerjaan:</strong> <?php echo $sespekerjaan ?></p>
+        <p><strong>Orang Tua:</strong> <?php echo $sesortu ?></p>
+        <p><strong>Kakak:</strong> <?php echo $seskakak ?></p>
+        <p><strong>Adik:</strong> <?php echo $sesadik ?></p>
       </div>
       <?php endif; ?>
     </section>
